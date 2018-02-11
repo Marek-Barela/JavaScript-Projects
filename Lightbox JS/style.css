@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+}
+
+img {
+    height: 330px;
+    width: 900px;
+}
+
+.lightbox-container {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.lightbox-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    cursor: pointer;
+}
+
+.lightbox-images img {
+    width: 100%;
+    height: 100px;
+}
+
+.lightbox-img {
+    animation: lightbox-animation 0.3s ease-in;
+}
+
+@keyframes lightbox-animation {
+    from {opacity: 0}
+    to {opacity: 1}
+}
