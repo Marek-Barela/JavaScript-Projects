@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>Rock, Scissors, Paper</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="game">
+		<div id="topContainer">
+			<h1>Welcome in Rock, Paper, Scissors !</h1>
+			<button id="btnStart">Start Game</button>
+		</div>
+		<div id="midContainer">
+			<div class="flex">
+				<div id=player>
+					<p id="nickName">Player</p>
+					<p>Score</p>
+					<p id="playerScore">0</p>
+					<p id="playerChoice">Player choice</p>
+				</div>
+				<div>
+					<p>VS</p>
+					<p id="showWinner">winner is...</p>
+				</div>
+				<div id="computer">
+					<p>Computer</p>
+					<p>Score</p>
+					<p id="pcScore">0</p>
+					<p id="pcChoice">Computer choise</p>
+				</div>
+			</div>
+		</div>
+		<div id="botContainer">
+			<div id="rock"><img src="img/rock.png"></div>
+			<div id="scissors"><img src="img/scissors.png"></div>
+			<div id="paper"><img src="img/paper.png"></div>
+		</div>
+	</section>
+	<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
