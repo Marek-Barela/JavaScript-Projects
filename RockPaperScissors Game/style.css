@@ -1,0 +1,66 @@
+body {
+	margin: 0;
+	font-size: 25px;
+	background-image: url("img/spiration-light.png");
+	font-family: 'Flamenco', cursive;
+	/* Background pattern from Subtle Patterns */
+}
+
+.game {
+	position: relative;
+}
+
+#topContainer {
+	text-align: center;
+	margin: auto;
+	font-size: 40px;
+}
+
+#topContainer button {
+	width: 300px;
+	height: 70px;
+	border: none;
+	font-family: 'Flamenco', cursive;
+	font-size: 30px;
+	background-color: #A1D890;
+	color: white;
+	text-transform: uppercase;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+#midContainer .flex {
+	justify-content: center;
+	display: flex;
+}
+
+#midContainer .flex div {
+	margin-top: 100px;
+	padding-right: 100px;
+	padding-left: 100px;
+	text-align: center;
+}
+
+#botContainer {
+	width: 800px;
+	margin: 100px auto 0 auto;
+}
+
+#botContainer div {
+	display: inline-block;
+	padding: 0 50px 0 50px;
+}
+
+#botContainer div img {
+	width: 150px;
+	height: 150px;
+}
+
+#showWinner, #pcChoice, #playerChoice {
+	position: absolute;
+	text-align: center;
+}
+
+#showWinner {
+	right: 40%;
+	left: 40%;
+}
