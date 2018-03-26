@@ -3,7 +3,7 @@ const lightboxGallery = document.querySelectorAll('.lightbox-gallery img'),
       lightboxContent = document.querySelector('.lightbox-content img'),
       closeLightbox = document.getElementById('close-btn');
 
-(function changeSlide() {
+(function() {
     lightboxGallery.forEach(function(img){
         img.addEventListener('click', function(e) {
             lightboxContent.src = e.target.src
