@@ -1,6 +1,6 @@
 const lightboxContent = document.querySelectorAll('.lightbox-img img')[0],
       lightboxImages = document.querySelectorAll('.lightbox-images img');
-(function lightboxSlide() {
+(function() {
     lightboxImages.forEach(function(img){
         img.addEventListener('click', function(e){
             if (lightboxContent.src == e.target.src) {
