@@ -1,0 +1,96 @@
+*
+    box-sizing: border-box
+    outline: 0
+body
+    background-color: #6061ed
+    font-family: 'Raleway', sans-serif
+.row:after, .row:before
+    clear: both
+[class*="col-"]
+    display: table
+    float: left
+    content: ""
+.col-12
+    width: 100%
+button
+    color: white
+    background-color: #41418f
+    font-size: 0.5em
+    text-transform: uppercase
+    font-weight: 700
+    width: 150px
+    height: 30px
+    margin-top: 15px
+    border-radius: 10px
+    border: none
+    cursor: pointer
+    letter-spacing: 2px
+    transition: 0.3s background-color
+    &:hover
+            background-color: #30307e
+.kanban
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    h1
+        margin: 50px 0 20px 0
+        font-size: 3em
+        letter-spacing: 6px
+        color: white
+    input
+        width: 250px
+        height: 45px
+        border: none
+        border-radius: 10px
+        font-size: 1.1em
+        padding: 15px
+.board
+    .col-12
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+    h2
+        font-size: 1.5em
+        margin: 35px 0 5px 0
+        color: white
+        letter-spacing: 3px
+    input
+        font-size: 0.8em
+        width: 200px
+        height: 35px
+        border: none
+        border-radius: 10px
+        padding: 15px
+    .board__add-button
+        width: 100px
+    .board__delete-button
+        width: 30px
+        background-color: #da0605
+        margin-left: 20px
+        border-radius: 100%
+        transition: 0.3s background-color
+        &:hover
+            background-color: #c90504
+.board__list
+    list-style-type: none
+    padding: 0 
+    li
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: #9c9dee
+        margin-top: 10px
+        padding: 20px
+        color: white
+        font-weight: 700
+        border-radius: 10px
+    button
+        width: 30px
+        margin: 0 0 0 20px
+        background-color: #da0605
+        border-radius: 100%
+        transition: 0.3s background-color
+        &:hover
+            background-color: #c90504
