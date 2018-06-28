@@ -6,22 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
 <body>
     <main>
         <section class="contact-section">
             <div class="contact__container">
+                <h4>Send a message</h4>
                 <form class="contact-form">
-                    <input type="text" placeholder="Your Name">
-                    <input type="text" placeholder="Subject">
-                    <input type="text" placeholder="Your Email">
-                    <textarea id="" cols="30" rows="10" placeholder="Write your message here..."></textarea>
-                    <button type="submit"></button>
+                    <input id="name" type="text" placeholder="Your Name">
+                    <input id="subject" type="text" placeholder="Subject">
+                    <input id="email" type="text" placeholder="Your Email">
+                    <textarea id="message" cols="30" rows="10" placeholder="Write your message here..."></textarea>
+                    <button type="submit">SUBMIT</button>
                 </form>
             </div>
         </section>
     </main>
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
 </body>
 
 </html>
