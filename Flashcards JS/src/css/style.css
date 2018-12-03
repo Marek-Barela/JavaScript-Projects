@@ -73,6 +73,27 @@ button {
   margin: 5px 0;
 }
 
+.flashcard__paragraph--size {
+  font-size: 1.3em;
+  padding: 5px;
+}
+
+.flashcard__paragraph--underscore {
+  text-decoration: underline;
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.flashcard--edit {
+  background-color: transparent;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+
+.flashcard--edit:hover {
+  background-color: rgba(0, 0, 0, 0.4)
+}
+
 .flashcard__textarea {
   width: 190px;
   height: 130px;

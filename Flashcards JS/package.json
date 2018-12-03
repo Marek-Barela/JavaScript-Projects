@@ -4,7 +4,8 @@
   "description": "Webpack configuration with babel",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode production"
+    "start": "webpack-dev-server --mode production",
+    "build": "webpack"
   },
   "author": "Marek Bareła",
   "license": "MIT",

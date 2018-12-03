@@ -7,11 +7,12 @@ import {
   saveFlashcardAction,
   editQuestionInputAction,
   editAnswerInputAction,
-  createFlashcardAction
+  createFlashcardAction,
+  deleteFlashcardAction,
+  showFlashcardAnswerAction
 } from "../update/update.js"
 
 const {
-  pre,
   h1,
   p,
   button,
@@ -20,6 +21,26 @@ const {
   textarea,
   span
 } = hh(h);
+
+const showFlashcardAnswer = (dispatch, flashcard) => {
+  if (flashcard.showAnswer === true) {
+    return div([
+      p({
+        className: "flashcard__paragraph"
+      }, "Answer :"),
+      p({
+        className: "flashcard__paragraph flashcard__paragraph--size"
+      }, `${flashcard.answer}`)
+    ])
+  } else {
+    return p({
+      onclick: () => {
+        dispatch(showFlashcardAnswerAction(true, flashcard.id))
+      },
+      className: "flashcard__paragraph flashcard__paragraph--underscore"
+    }, "Show answer")
+  }
+}
 
 const createFlashcards = (dispatch, model) => {
   const {
@@ -37,7 +58,10 @@ const createFlashcards = (dispatch, model) => {
           }
         }, [
           span({
-            className: "flashcard__close-button"
+            className: "flashcard__close-button",
+            onclick: () => {
+              dispatch(deleteFlashcardAction(flashcard.id))
+            }
           }, "x"),
           p({
             className: "flashcard__paragraph"
@@ -73,18 +97,22 @@ const createFlashcards = (dispatch, model) => {
       return div({
         className: "flashcard"
       }, [
+        span({
+          className: "flashcard__close-button",
+          onclick: () => {
+            dispatch(deleteFlashcardAction(flashcard.id))
+          }
+        }, "x"),
         p({
           className: "flashcard__paragraph"
-        }, "Qestions"),
+        }, "Qestions :"),
         p({
-          className: "flashcard__paragraph"
+          className: "flashcard__paragraph flashcard__paragraph--size flashcard--edit",
+          onclick: () => {
+            dispatch(saveFlashcardAction(true, flashcard.id))
+          }
         }, `${flashcard.question}`),
-        p({
-          className: "flashcard__paragraph"
-        }, "Answer"),
-        p({
-          className: "flashcard__paragraph"
-        }, `${flashcard.answer}`)
+        showFlashcardAnswer(dispatch, flashcard)
       ])
     }
   })
@@ -108,8 +136,7 @@ const view = (dispatch, model) => {
       className: "flashcard__container"
     }, [
       createFlashcards(dispatch, model)
-    ]),
-    //pre(JSON.stringify(model, null, 2))
+    ])
   ])
 }
 
